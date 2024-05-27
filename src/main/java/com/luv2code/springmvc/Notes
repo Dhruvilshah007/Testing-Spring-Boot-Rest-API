@@ -1,0 +1,29 @@
+Spring Testing Support
+For testing Spring REST controllers, you can use MockMvc
+. Provides Spring REST processing of request / response
+There is no need to run a server (embedded or external)
+In general, the process is VERY similar to Spring MVC testing
+Slight differences for content-type and checking JSON results
+
+
+# Controller Test Structure
+
+// inject support utils
+// inject Service and DAOS
+// inject SQL strings
+// @Before All, BeforeEach and @AfterEach
+
+
+Json Path Examples
+
+eg-Json is
+$->{
+$.id->"id":10,
+$.firstname->"firstname":"dds",
+...
+
+}
+
+$  -> The root element to query.Starts all path expression
+$.id -> Access the id element of JSON element
+$.firstname -> Access the firstname element of JSON element
